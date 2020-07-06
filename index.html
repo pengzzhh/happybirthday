@@ -18,7 +18,7 @@
         </style>
 </head>
     <body>
-    <audio controls="controls" autoplay="autoplay">
+    <audio id="stMusic" controls="controls" autoplay="autoplay">
         <source src="./music/love.mp3" type="audio/mp3" />
     </audio>
         <div id="main">
@@ -46,7 +46,7 @@
 <span class="STYLE1"></span>
                   <!-- <div id="clock"></div> -->
               </div>
-                <canvas id="canvas" width="1100" height="680"></canvas>
+                <canvas id="canvas" width="1100" height="680" style="display: none"></canvas>
             </div>
             
         </div>
@@ -55,7 +55,28 @@
     </script>
 
     <script>
+        function autoPlay(f){
+            "MicroMessenger" == navigator.userAgent.match(/MicroMessenger/i)?("object" == typeof WeixinJSBridge ?  WeixinJSBridge.invoke("WeixinJSBridgeReady", {}, function() {
+                f();
+                document.getElementById('bgMusic').play();
+                document.getElementById('bgMusic').pause();
+            }):document.addEventListener("WeixinJSBridgeReady", function() {
+                f();
+                document.getElementById('bgMusic').play();
+                document.getElementById('bgMusic').pause();
+            }, !1) ):f();
+        };
+
+        autoPlay(function(){
+
+        });
+
     (function(){
+        var audio = $("#bgMusic");
+        console.log(audio)
+
+        //播放(继续播放)
+
         var canvas = $('#canvas');
     
         if (!canvas[0].getContext) {
@@ -209,6 +230,8 @@
 
         runAsync().start();
     })();
+
+
     </script>
 
     </body></html>
