@@ -46,7 +46,7 @@
 <span class="STYLE1"></span>
                   <!-- <div id="clock"></div> -->
               </div>
-                <canvas id="canvas" width="1100" height="680" style="display: none"></canvas>
+                <canvas id="canvas" width="1100" height="680" ></canvas>
             </div>
             
         </div>
@@ -58,24 +58,25 @@
         function autoPlay(f){
             "MicroMessenger" == navigator.userAgent.match(/MicroMessenger/i)?("object" == typeof WeixinJSBridge ?  WeixinJSBridge.invoke("WeixinJSBridgeReady", {}, function() {
                 f();
-                document.getElementById('bgMusic').play();
-                document.getElementById('bgMusic').pause();
+                document.getElementById('stMusic').play();
+                document.getElementById('stMusic').pause();
             }):document.addEventListener("WeixinJSBridgeReady", function() {
                 f();
-                document.getElementById('bgMusic').play();
-                document.getElementById('bgMusic').pause();
+                document.getElementById('stMusic').play();
+                document.getElementById('stMusic').pause();
             }, !1) ):f();
         };
 
-        autoPlay(function(){
 
-        });
 
     (function(){
-        var audio = $("#bgMusic");
+        var audio = $("#stMusic");
         console.log(audio)
 
         //播放(继续播放)
+        autoPlay(function(){
+
+        });
 
         var canvas = $('#canvas');
     
