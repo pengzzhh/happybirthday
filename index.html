@@ -18,9 +18,8 @@
         </style>
 </head>
     <body>
-    <audio id="stMusic"  autoplay="autoplay">
-        <source src="./music/love.mp3" type="audio/mp3" />
-    </audio>
+
+    <!--<audio id="stMusic" src="./music/love.mp3" autoplay="autoplay">-->
         <div id="main">
              <div id="wrap">
                 <div id="text">
@@ -70,15 +69,14 @@
 
 
     (function(){
-        var audio = $("#stMusic");
-        console.log(audio)
+
 
         //播放(继续播放)
         autoPlay(function(){
 
         });
 
-
+        // audio.play();
 
 
         var canvas = $('#canvas');
@@ -134,7 +132,8 @@
 
         canvas.click(function(e) {
 
-
+            var audio = $("#stMusic")[0];
+            audio.play();
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
@@ -245,4 +244,6 @@
     }
     </script>
 
-    </body></html>
+    </body>
+
+<audio id="stMusic" src="./music/chiji.flac" autobuffer autoplay loop controls ></audio></html>
