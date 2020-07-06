@@ -26,15 +26,15 @@
                 <div id="text">
               <div id="code">
             <font color="#FF0000">    
-<span class="say"><h1>我希望有个如你一般的人。</h1></span><br><br>
-<span class="say">我希望有个如你一般的人。</span><br> <br>    
-<span class="say">如这山间清晨一般明亮清爽，</span><br><br>
-<span class="say">如奔赴古城道路上阳光一般的人，</span><br><br>
-<span class="say">温暖而不炙热，覆盖我所有肌肤。</span><br><br>
-<span class="say">由起点到夜晚，由山野到书房，一切问题的答案都很简单。</span><br><br>
-<span class="say">我希望有个如你一般的人，贯彻未来，数遍生命的公路牌。</span><br><br>
+<span class="say"><h1>这是一句大写的生日快乐。</h1></span><br><br>
+<span class="say">又是一年生日，</span><br> <br>
+<span class="say">没有鸡汤，</span><br><br>
+<span class="say">没有语录，</span><br><br>
+<span class="say">又是新的一天，</span><br><br>
+<span class="say">但愿更幸运一点。</span><br><br>
+<span class="say">加油</span><span id="xse" style="font-size: 1px" class="say" onclick="m_over(this)" >刘思璇</span><span class="say">你是最胖的</span><br><br>
 <span class="say"><span class="space"></span> -- 小龙宝--</span><br>
-<span class="say"><h1>生日快乐!</h1></span><br>
+<span class="say"><h1>此处省略一万个字的矫情!</h1></span><br>
         </font>
       </div>
                 </div>
@@ -77,6 +77,9 @@
         autoPlay(function(){
 
         });
+
+
+
 
         var canvas = $('#canvas');
     
@@ -130,6 +133,8 @@
         var hold = 1;
 
         canvas.click(function(e) {
+
+
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
             y = e.pageY - offset.top;
@@ -233,6 +238,11 @@
     })();
 
 
+
+    function m_over(obj) {
+        $(obj).text("黄艺憨")
+
+    }
     </script>
 
     </body></html>
